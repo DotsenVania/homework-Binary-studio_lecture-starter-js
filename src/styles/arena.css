@@ -1,0 +1,225 @@
+.arena___root {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url('../../resources/arena.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
+
+.arena___battlefield {
+  display: flex;
+  max-height: 382px;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.arena___right-fighter img {
+  transform: scaleX(-1);
+}
+
+.arena___fighter img {
+  height: 480px;
+}
+
+.arena___fight-status {
+  display: flex;
+  margin: 30px;
+  justify-content: center;
+}
+
+.arena___fighter-name {
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  font-size: 26px;
+  font-family: 'Arial Black';
+  font-weight: 700;
+}
+
+.arena___fighter-indicator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 30px;
+}
+
+.arena___health-indicator {
+  width: 100%;
+  height: 25px;
+  border: 2px solid;
+  border-radius: 5px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.arena___health-bar {
+  height: 100%;
+  width: 100%;
+  background-color: #ebd759;
+}
+
+.distance_for-battle-element {
+  position: absolute; 
+  transform: translateX(-50%);
+  bottom: 0; 
+  left: 50%; 
+  height: 30px;
+  max-width: 10%; 
+  background-color: rgba(126, 126, 126, 0.466); 
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  font-size: 30px;
+  font-weight: 800;
+  background-color: rgba(240, 2, 2, 0.795);
+}
+
+.arena___left-fighter{
+  position: relative; 
+  border-radius: 10%;
+  height: 700px;
+}
+.arena___right-fighter{
+  position: relative; 
+  border-radius: 10%;
+  height: 700px;
+}
+
+
+.active::before{
+  content: ''; 
+  position: absolute; 
+  right: 200px;
+  top: 0; 
+  width: 5px;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.534);
+  animation: shock 50ms ease ;
+  animation-iteration-count: 1; 
+  opacity: 0;
+  box-shadow: 2px 28px 70px 60px rgba(255, 0, 0, 0.534);
+  z-index: 10000;
+}
+@keyframes shock {
+  0% {
+    right: 200px; 
+    opacity: 0;
+  }
+  100% {
+    right: -50px;
+    opacity: 1;
+    display: none
+  }
+}
+.arena___right-fighter >.fighter-preview___img {
+  height: 100%;
+}
+.active__left::before{
+  content: ''; 
+  position: absolute; 
+  left: 200px;
+  top: 0; 
+  width: 5px;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.534);
+  animation: shockLeft 50ms ease ;
+  animation-iteration-count: 1; 
+  opacity: 0;
+  box-shadow: 2px 28px 70px 60px rgba(255, 0, 0, 0.534);
+  z-index: 10000;
+}
+@keyframes shockLeft {
+  0% {
+    left: 200px; 
+    opacity: 0;
+  }
+  100% {
+    left: -50px;
+    opacity: 1;
+  }
+}
+
+.block-left__wrapper{
+  display: flex; 
+  
+}
+.block-right__wrapper{
+  display: flex; 
+}
+.btn {
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  width: 120px;
+  height: 50px;
+  color: white;
+  margin: 10px;  
+  border-radius: 10px; 
+  background-color: rgba(73, 64, 201, 0.582);
+}
+.btn > span {
+  font-size: 20px;
+  background-color: rgb(112, 53, 53);
+  padding: 4px 7px 4px 7px; 
+}
+
+.block-left__wrapper_superHit {
+  position: relative;
+  z-index: 2000;
+  
+}
+.block-right__wrapper_superHit {
+  position: relative;
+  z-index: 2000;
+
+}
+.block-left__wrapper_superHit > .progress {
+  position: absolute;
+  padding: 0; 
+  left: 0; 
+  top: 0;
+  width: 0%; 
+  height: 100%;  
+  border-radius: 10px;
+  z-index: -1;
+  background-color: rgba(214, 119, 11, 0.788);
+  transition: width ease 10s;
+}
+.block-right__wrapper_superHit > .progress {
+  position: absolute;
+  padding: 0; 
+  left: 0; 
+  top: 0;
+  width: 0%; 
+  height: 100%;  
+  border-radius: 10px;
+  z-index: -1;
+  background-color: rgba(214, 119, 11, 0.788);
+  transition: width ease 10s;
+}
+
+.progress_status_left {
+  position: absolute; 
+  top: 0; 
+  left:0; 
+  height: 15px; 
+  width: 45%; 
+  background-color: green;
+}
+.progress_status_right {
+  position: absolute; 
+  top: 0; 
+  right:0; 
+  height: 15px; 
+  width: 45%; 
+  background-color: green;
+}
+
+/* //transform: rotateZ(14deg) translate(171px, -50px); */

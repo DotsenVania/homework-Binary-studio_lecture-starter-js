@@ -1,0 +1,100 @@
+.fighter-preview___root {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 250px;
+}
+
+
+.fighter-preview___right {
+  align-items: flex-end;
+  transform: scaleX(-1);
+  height: 100%;
+  justify-content:space-between;
+  align-items: center; 
+}
+.fighter-preview___img {
+  max-height: 50%;
+}
+
+.fighter-preview___left {
+  align-items: flex-start;
+  height: 100%;
+  justify-content:space-between;
+  align-items: center; 
+}
+.fighter-preview___left > .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fighter-preview___right > .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fighter-preview___left > .wrapper > .fighter-preview___name {
+  font-size: 30px;
+  font-family: 'Arial Black';
+  font-weight: 700;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+}
+.fighter-preview___right > .wrapper > .fighter-preview___name {
+  font-size: 30px;
+  font-family: 'Arial Black';
+  font-weight: 700;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  transform: scaleX(-1);
+}
+
+.fighter-preview___left > .wrapper  > .fighter-preview___heart {
+  width: 300px;
+  min-height: 25px;
+  border: 2px solid;
+  border-radius: 5px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+.fighter-preview___right > .wrapper  > .fighter-preview___heart {
+  width: 300px;
+  min-height: 25px;
+  border: 2px solid;
+  border-radius: 5px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+.bar {
+  display: block; 
+  min-height: 25px;
+  width: 300px;
+  background-color: #ebd759;
+}
+.fighter-preview___left  > .info {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  border: 3px solid #855921;;
+  background: #ebd759; 
+}
+.fighter-preview___right > .info {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  border: 3px solid #855921;
+  background: #ebd759; 
+  transform: scaleX(-1);
+}
+
+.fighter-preview___left  > .info > .item{
+  margin: 5px; 
+  padding: 5px; 
+  border: 1px solid #ebd759; 
+}
+.fighter-preview___right > .info > .item{
+  margin: 5px; 
+  padding: 5px; 
+  border: 1px solid #ebd759; 
+}
